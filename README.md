@@ -20,7 +20,7 @@ An AI-powered Gradio 6 application that generates personalized 4-week Brazilian 
 
 **Track**: Track 2 - MCP in Action
 
-**Demo Video**: [Demo Video (1-5 minutes)](YOUR_VIDEO_URL_HERE) - *Coming soon*
+**Demo Video**: [Demo Video (1-5 minutes)](https://www.loom.com/share/e96f5c9f902549599d9703e3e7e5e6c2) - *Coming soon*
 
 **Social Media Post**: [Social Media Post](https://x.com/tspenov/status/1995185770555211933) - *Coming soon*
 
