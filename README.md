@@ -9,6 +9,7 @@ app_file: app.py
 pinned: false
 license: mit
 tags:
+  - building-mcp-track-consumer
   - mcp-in-action-track-consumer
 ---
 
@@ -18,19 +19,31 @@ An AI-powered Gradio 6 application that generates personalized 4-week Brazilian 
 
 ## 🏆 Hackathon Submission
 
-**Track**: Track 2 - MCP in Action
+**Tracks**: 
+- **Track 1**: Building MCP - Created the BJJ Coach MCP Server
+- **Track 2**: MCP in Action - Built this AI agent application
 
-**Demo Video**: [Demo Video (1-5 minutes)](https://www.loom.com/share/e96f5c9f902549599d9703e3e7e5e6c2) - *Coming soon*
+**Demo Video**: [Demo Video (1-5 minutes)](https://www.loom.com/share/e96f5c9f902549599d9703e3e7e5e6c2)
 
-**Social Media Post**: [Social Media Post](https://x.com/tspenov/status/1995185770555211933) - *Coming soon*
+**Social Media Post**: [X/Twitter Post](https://x.com/tspenov/status/1995185770555211933)
 
 **Original Work**: This project was created during the hackathon period (November 14-30, 2025).
 
 **Participation**: Solo project by [@tspenov](https://huggingface.co/tspenov)
 
-### Why This Project Fits Track 2
+### Track 1: Building MCP - BJJ Coach MCP Server
 
-This application demonstrates **autonomous AI agent behavior** using:
+I built the **BJJ Coach MCP Server** (`https://bjjcoach.ai/mcp`) that powers this application:
+
+- **Functioning MCP Server**: Streamable HTTP transport with SSE support
+- **Domain-Specific Tools**: 3 specialized tools for BJJ position data and video search
+- **Integration Ready**: Works with Claude Desktop, Cursor, and any MCP client
+- **Purpose**: Provides AI agents with access to curated BJJ knowledge and instructional content
+- **Capabilities**: Position search, metadata retrieval, video recommendations with instructor info
+
+### Track 2: MCP in Action - This Application
+
+This application demonstrates **autonomous AI agent behavior** using the BJJ Coach MCP server:
 - **Planning & Reasoning**: Agent declares its strategy and uses OpenAI GPT-5 Responses API with reasoning enabled
 - **Multi-step Execution**: Autonomous workflow (search positions → fetch metadata → retrieve videos → analyze chains → generate recommendations)
 - **MCP Integration**: Uses BJJ Coach MCP server as primary tool source with 3 specialized tools
@@ -396,19 +409,36 @@ For app issues:
 - **Pydantic AI** for modern agent orchestration
 - **OpenAI** for GPT models
 
-## Track 2 Requirements Checklist
+## Hackathon Requirements Checklist
 
-This project meets all requirements for **Track 2: MCP in Action**:
+This project meets all requirements for **both Track 1 and Track 2**:
 
 ### General Requirements
 - ✅ **Published as HuggingFace Space**: This Space is in the hackathon organization
-- ✅ **Track Tag Added**: `mcp-in-action-track-consumer` in README frontmatter
-- ✅ **Social Media Post**: Placeholder link included (to be updated)
-- ✅ **Demo Video**: Placeholder link included (to be updated, 1-5 minutes)
+- ✅ **Track Tags Added**: 
+  - `building-mcp-track-consumer` for Track 1
+  - `mcp-in-action-track-consumer` for Track 2
+- ✅ **Social Media Post**: [X/Twitter post](https://x.com/tspenov/status/1995185770555211933)
+- ✅ **Demo Video**: [Loom video](https://www.loom.com/share/e96f5c9f902549599d9703e3e7e5e6c2) (1-5 minutes)
 - ✅ **Original Work**: Created during hackathon period (Nov 14-30, 2025)
 - ✅ **Solo Participation**: Single developer (@tspenov)
 
-### Track 2 Specific Requirements
+### Track 1 Specific Requirements (BJJ Coach MCP Server)
+- ✅ **Functioning MCP Server**: 
+  - Live at `https://bjjcoach.ai/mcp`
+  - Streamable HTTP transport with SSE
+  - Token-based authentication
+  
+- ✅ **Can be a Gradio App**: This Gradio app demonstrates the MCP server integration
+  
+- ✅ **Video Shows Integration**: Demo video shows integration with this AI agent (MCP client)
+  
+- ✅ **Documented**: 
+  - Purpose: Provide BJJ domain knowledge to AI agents
+  - Capabilities: 3 specialized tools for position search, metadata, and videos
+  - Usage: Token-based auth, rate-limited API
+
+### Track 2 Specific Requirements (This Application)
 - ✅ **Demonstrates Autonomous Agent Behavior**: 
   - Planning: Agent uses `declare_plan()` to announce strategy
   - Reasoning: GPT-5 Responses API with reasoning enabled
