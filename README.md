@@ -244,8 +244,7 @@ This app uses Gradio 6 best practices:
 
 - ✅ `gr.Blocks()` for custom layouts
 - ✅ `gr.Dropdown(allow_custom_value=True)` for autocomplete
-- ✅ `buttons=["copy"]` parameter (not deprecated `show_copy_button`)
-- ✅ App-level parameters in `launch()` method
+- ✅ `buttons=["copy"]` parameter (not deprecated `show_copy_bu 
 - ✅ Async event handlers for MCP operations
 
 ## API Reference
