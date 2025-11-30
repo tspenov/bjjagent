@@ -78,6 +78,9 @@ MCP_TOKEN=your_bjj_coach_mcp_token_here
 
 # OpenAI API Key
 OPENAI_API_KEY=your_openai_api_key_here
+
+# Logfire Token (optional - for production deployments)
+LOGFIRE_TOKEN=your_logfire_write_token_here
 ```
 
 ### Getting Your API Keys
@@ -93,7 +96,19 @@ OPENAI_API_KEY=your_openai_api_key_here
 2. Create a new API key
 3. Copy the key
 
+#### Logfire Token (Optional - for Telemetry)
+Logfire provides monitoring and observability. For local development, you can use `logfire auth`. For production deployments (like Hugging Face Spaces):
+1. Install Logfire CLI: `pip install logfire`
+2. Authenticate locally: `logfire auth`
+3. Create a write token: `logfire projects tokens create`
+4. Copy the write token
+5. Add it to your deployment environment as `LOGFIRE_TOKEN`
+
+**Note**: The app works fine without Logfire - it's optional for monitoring.
+
 ## Usage
+
+### Local Development
 
 1. **Start the application**:
 ```bash
@@ -108,6 +123,18 @@ Navigate to http://localhost:7860
    - Click "Generate Program"
    - Wait for the AI agent to research and create your program
    - View your personalized 4-week training plan with video links
+
+### Deploying to Hugging Face Spaces
+
+1. **Create a new Space** at https://huggingface.co/spaces
+2. **Select Gradio as SDK** with SDK version 6.0.1
+3. **Add secrets** in Settings → Repository secrets:
+   - `MCP_TOKEN`: Your BJJ Coach MCP token
+   - `OPENAI_API_KEY`: Your OpenAI API key
+   - `LOGFIRE_TOKEN`: (Optional) Your Logfire write token for monitoring
+4. **Push your code** to the Space repository
+
+The app automatically detects if it's running in production and uses the write token for Logfire instead of requiring interactive authentication.
 
 ## How It Works
 
@@ -185,6 +212,12 @@ The BJJ Coach MCP server provides:
 - If the agent fails, check the Debug Information accordion
 - Verify the position name is valid
 - Try a more common position name
+
+### "You are not logged into Logfire" error
+This error occurs when deploying to production (like Hugging Face Spaces):
+- **Solution**: Add `LOGFIRE_TOKEN` environment variable with a write token
+- **Alternative**: The app will automatically skip Logfire if configuration fails
+- **Local development**: Run `logfire auth` once to authenticate locally
 
 ## Development
 

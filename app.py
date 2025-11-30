@@ -4,6 +4,7 @@ Analyzes BJJ positions, discovers position chains, and provides YouTube video re
 with drill notes and focus cues using Pydantic AI agents and MCP tools.
 """
 
+import os
 import logfire
 import gradio as gr
 from config import (
@@ -28,10 +29,24 @@ from agent_setup import (
 from event_handler import ChatEventHandler
 
 # Configure Logfire
-logfire.configure()
-logfire.instrument_pydantic_ai()
-logfire.instrument_httpx()
-logfire.instrument_openai()
+# Try to use write token for production (Hugging Face), fallback to local auth
+logfire_token = os.getenv("LOGFIRE_TOKEN")
+try:
+    if logfire_token:
+        # Production mode with write token
+        logfire.configure(token=logfire_token)
+    else:
+        # Local mode with user authentication
+        logfire.configure()
+    
+    # Instrument various libraries for telemetry
+    logfire.instrument_pydantic_ai()
+    logfire.instrument_httpx()
+    logfire.instrument_openai()
+    print("✅ Logfire configured successfully")
+except Exception as e:
+    print(f"⚠️  Logfire configuration skipped: {e}")
+    print("   App will continue without Logfire telemetry")
 
 # Configure logging
 configure_logging()
