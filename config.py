@@ -23,7 +23,9 @@ COMMON_POSITIONS = [
     "De La Riva Guard",
     "Armbar",
     "Foot Sweep (Ashi Waza)",
-    "Single Leg"
+    "Single Leg",
+    "Butterfly Guard",
+    "Front Headlock",
     # "X Guard",
     # "Guard Retention",
     # "Side Control",
