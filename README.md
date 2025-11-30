@@ -294,3 +294,4 @@ For app issues:
 
 Built with ❤️ for the BJJ community
 
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
