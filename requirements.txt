@@ -1,0 +1,6 @@
+gradio>=6.0.0
+pydantic-ai[openai,mcp]>=1.25.0
+python-dotenv>=1.0.0
+logfire>=4.15.1
+openai>=1.59.0
+
