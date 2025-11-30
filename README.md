@@ -5,7 +5,7 @@ An AI-powered Gradio 6 application that generates personalized 4-week Brazilian 
 ## Features
 
 - 🎯 **Smart Position Search**: Autocomplete dropdown with common BJJ positions
-- 🤖 **AI-Powered Planning**: Uses GPT-4o with Pydantic AI agents
+- 🤖 **AI-Powered Planning**: Uses GPT-5 with Pydantic AI agents
 - 📚 **Real BJJ Data**: Connects to BJJ Coach MCP server for positions and videos
 - 📅 **Structured Programs**: 4-week programs with 5 training days per week (20 sessions)
 - 🎥 **Video Integration**: Clickable links to instructional videos with instructor info
@@ -21,7 +21,7 @@ An AI-powered Gradio 6 application that generates personalized 4-week Brazilian 
          │
          ▼
 ┌─────────────────┐      ┌──────────────────┐
-│ Pydantic AI     │◄────►│  OpenAI GPT-4o   │
+│ Pydantic AI     │◄────►│  OpenAI GPT-5    │
 │ Agent           │      └──────────────────┘
 └────────┬────────┘
          │
@@ -101,7 +101,7 @@ Navigate to http://localhost:7860
 
 1. **User Input**: Select a BJJ position from the dropdown or type a custom one
 2. **MCP Connection**: App connects to BJJ Coach MCP server using Streamable HTTP transport
-3. **Agent Creation**: Pydantic AI agent initialized with GPT-4o and MCP server as toolset
+3. **Agent Creation**: Pydantic AI agent initialized with GPT-5 and MCP server as toolset
 4. **Program Generation**: Agent follows this workflow:
    - Searches for the position using `search_positions` tool
    - Gets metadata including chain of related positions with `get_position_metadata`
