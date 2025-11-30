@@ -1,3 +1,17 @@
+---
+title: Bjjagent
+emoji: 🏢
+colorFrom: red
+colorTo: purple
+sdk: gradio
+sdk_version: 6.0.1
+app_file: app.py
+pinned: false
+license: mit
+---
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
 # BJJ Training Program Generator 🥋
 
 An AI-powered Gradio 6 application that generates personalized 4-week Brazilian Jiu-Jitsu training programs using Pydantic AI agents and the BJJ Coach MCP server.
