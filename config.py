@@ -20,6 +20,10 @@ COMMON_POSITIONS = [
     "Mount",
     "Back Control",
     "Side Control",
+    "De La Riva Guard",
+    "Armbar",
+    "Foot Sweep (Ashi Waza)",
+    "Single Leg"
     # "X Guard",
     # "Guard Retention",
     # "Side Control",
