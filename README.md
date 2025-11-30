@@ -213,12 +213,6 @@ The BJJ Coach MCP server provides:
 - Verify the position name is valid
 - Try a more common position name
 
-### "You are not logged into Logfire" error
-This error occurs when deploying to production (like Hugging Face Spaces):
-- **Solution**: Add `LOGFIRE_TOKEN` environment variable with a write token
-- **Alternative**: The app will automatically skip Logfire if configuration fails
-- **Local development**: Run `logfire auth` once to authenticate locally
-
 ## Development
 
 ### Project Structure
